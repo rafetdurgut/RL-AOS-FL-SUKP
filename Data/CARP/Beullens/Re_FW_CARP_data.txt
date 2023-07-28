@@ -1,0 +1,115 @@
+From: Luc Muyldermans [Luc.Muyldermans@nottingham.ac.uk]
+Sent: 03 March 2006 18:08
+To: Eglese, Richard
+Subject: Re: FW: CARP data
+
+Dear Richard,
+
+Thanks for your email. The instances are attached (50 different graphs C1 - C25 and E1 - E25). In each graph, we solved the CARP twice: once with vehicle capacity 300 and once with capacity 600.  An instance was characterised as follows:
+
+first line: the number of nodes |V|
+second line: the number of edges (including the non-required ones) |E| third line: the vehicle capacity Q (please change this to 600 when required) fourth line: the depot node (a number between 1 and |V|)
+
+Next, there is a line for each node in the graph, e.g. in file 'C01.txt' the line corresponding to node one is:
+1  3    5   10    0   10   10    0   37   10   10
+
+The 1st number is the node number ("1")
+The 2nd number is the degree of this node ("3") The 3rd number refers to the first node connected to node 1 (node "5") The 4th number indicates the length of edge  (1,  5) (length "10") The 5th number is the demand on edge (1,  5) ("0") The 6th number refers to the second node connected to node 1 (node "10") The 7th number indicates the length of edge (1, 10) (length "10") The 8th number is the demand on edge (1, 10) ("0") The 9th number gives to the third node connected to node 1 (node "37") The 10th number indicates the length of edge (1, 37)  (length "10") The 11th number is the demand on edge (1, 37) ("10")
+
+Please note that due to this format, every edge (and its length and demand) appears twice (e.g. edge (1, 37) is the same as edge (37, 1)) but you need to consider it only once. Further, edges with demand zero are non-required, and for required edges (positive demand) the demand is equal to the edge length. All edge lengths are multiples of five, so if you calculate lower bounds and obtain e.g. 523.2 then you can round this to 525. The gaps, lower bounds & upper bounds mentioned in the EJOR paper are based on deadheading only.
+
+
+Please let me know if you need further information.
+
+Best wishes,
+
+Luc 
+ 
+
+
+
+
+
+Dr. Luc Muyldermans
+Nottingham University Business School
+Jubilee Campus
+Wollaton Road
+Nottingham NG8 1BB
+UK
+
+Tel.: +44(0)115 8467746
+Email: luc.muyldermans@nottingham.ac.uk
+
+>>> "Eglese, Richard" <r.eglese@lancaster.ac.uk> 03/02/06 4:16 pm >>>
+ Dear Dr. Muyldermans,
+
+You will see from my message below to Patrick Beullens that I am carrying out some research on arc routing problems and I would be interested in having a copy of the data for the 100 new CARP instances created for your EJOR paper. I would be very grateful if you could send me a copy of the data sets you created for our experiments.
+
+Best regards,
+
+Richard.
+
+Richard Eglese
+Professor of Operational Research
+Department of Management Science
+Lancaster University Management School
+Lancaster LA1 4YX
+U.K.
+
+Tel: +44 (0) 1524 593869
+Fax: +44 (0) 1524 844885
+Email: R.Eglese@lancaster.ac.uk 
+
+
+-----Original Message-----
+From: Patrick Beullens [mailto:Patrick.Beullens@port.ac.uk]
+Sent: 02 March 2006 16:00
+To: Eglese, Richard
+Subject: Re: CARP data
+
+Dear Prof. Eglese,
+Thanks for your interest in our article. In fact, our research interest was in large fueled by your earlier published work in the field of arc routing. The test problems were developed by my colleague Dr. Luc Muyldermans in the context of his PhD dissertation. He is now at the Nottingham Business School and can be contacted at luc.muyldermans@nottingham.co.uk.
+All the best with your research. I would be very pleased to receive the working paper ones finished. 
+Best regards,
+Patrick Beullens
+
+On 27 Feb 2006 at 20:30, Eglese, Richard wrote:
+
+Dear Dr. Beullens,
+
+I am carrying out some research with Dr Jose Brandao on Capacitated Arc Routing Problems. We have read your paper *A guided local search heuristic for the capacitated arc routing problem*P.Beullens, L. Muyldermans, D. Cattrysse, D. Van Oudheusden EJOR 147, 629-643, 2003 with interest. We would like to try our methods on the 100 new CARP instances that you created and tested in that paper. Please would you send me a copy of the datasets? 
+
+Let me know if it would be better if I contacted one of the other authors.
+
+Best wishes,
+
+Richard.
+
+Richard Eglese
+Professor of Operational Research
+Department of Management Science
+Lancaster University Management School
+Lancaster LA1 4YX
+U.K.
+
+Tel: +44 (0) 1524 593869
+Fax: +44 (0) 1524 844885
+Email: R.Eglese@lancaster.ac.uk 
+
+
+*******************************************************
+Dr. Patrick Beullens
+Department of Mathematics
+University of Portsmouth
+Buckingham Building
+Lion Terrace, Portsmouth PO1 3HE, UK
+Tel: +44 (0)23 9284 6357
+Fax: +44 (0)23 9284 6364
+Web: www.port.ac.uk/maths
+Email: patrick.beullens@port.ac.uk
+*******************************************************
+
+
+This message has been checked for viruses but the contents of an attachment may still contain software viruses, which could damage your computer system:
+you are advised to perform your own checks. Email communications with the University of Nottingham may be monitored as permitted by UK legislation.
+
