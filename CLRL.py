@@ -221,9 +221,9 @@ class CLRL:
             return np.random.choice(self.parameters["operator_size"], p=np.ones((self.parameters["operator_size"],))/self.parameters["operator_size"]) 
             
         #AOS
-        feature_ind = [9,10,11,12,13,14,15,16,17,18]
-
-        return int(self.model.predict([candidate.features[feature_ind]])[0])
+        # feature_ind = [9,10,11,12,13,14,15,16,17,18]
+        # return int(self.model.predict([candidate.features[feature_ind]])[0])
+        return int(self.model.predict([candidate.features])[0])
 
     def __conf__(self):
         return ['CLRL', self.parameters["operator_size"] ,self.parameters["reward_type"],  self.parameters["eps"], self.parameters["W"], self.parameters["alpha"],self.parameters["gama"]  ,self.parameters["learning_mode"] , self.parameters["load_file"],self.parameters["reward_func"],type(self.model).__name__]
